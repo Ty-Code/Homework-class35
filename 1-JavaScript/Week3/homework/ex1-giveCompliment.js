@@ -18,13 +18,26 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
-function giveCompliment(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function giveCompliment(name) {
+  const compliments = [
+    'great',
+    'awesome',
+    'amazing',
+    'nice',
+    'stunning',
+    'nice',
+    'fantastic',
+    'remarkable',
+    'excellent',
+    'phenomenal',
+  ];
+  const randomNum = Math.floor(Math.random() * 10);
+  const compliment = compliments[randomNum];
+  return `You are ${compliment}, ${name}!`;
 }
 
 function main() {
-  // TODO substitute your own name for "HackYourFuture"
-  const myName = 'HackYourFuture';
+  const myName = 'Talha';
 
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));

@@ -1,0 +1,9 @@
+2021-12-17 10:13:39 info: ----------------------------------------------
+2021-12-17 10:13:39 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2021-12-17 10:13:39 info: ----------------------------------------------
+2021-12-17 10:13:41 info: All unit tests passed.
+2021-12-17 10:13:42 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:40:19 - Unknown word (Talha)
+
+2021-12-17 10:14:22 info: Disclaimer turned off
