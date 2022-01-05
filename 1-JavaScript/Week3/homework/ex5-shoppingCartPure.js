@@ -18,7 +18,7 @@ it pure. Do the following:
 // ! Function under test
 
 function addToShoppingCart(shoppingCart, item) {
-  const newShoppingCart = [...shoppingCart];
+  const newShoppingCart = shoppingCart;
   if (item) {
     newShoppingCart.push(item);
   }
