@@ -803,3 +803,8 @@ ex4-observable/ex4-observable.js
 2022-01-07 09:21:04 info: ------------------------------------------
 2022-01-07 09:21:05 info: All unit tests passed.
 2022-01-07 09:21:06 info: All steps were completed successfully
+2022-01-08 12:42:47 info: --------------------------------------
+2022-01-08 12:42:47 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-01-08 12:42:47 info: --------------------------------------
+2022-01-08 12:42:48 info: All unit tests passed.
+2022-01-08 12:42:49 info: All steps were completed successfully
