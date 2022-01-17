@@ -18,12 +18,12 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  let ulElement = document.createElement('ul');
+  const ulElement = document.createElement('ul');
 
   books.forEach((book) => {
-    let liElement = document.createElement('li');
-    let pElement = document.createElement('p');
-    let imgElement = document.createElement('img');
+    const liElement = document.createElement('li');
+    const pElement = document.createElement('p');
+    const imgElement = document.createElement('img');
 
     pElement.textContent = `${book.title} - ${book.author}`;
     let imgURL = `assets/${book.title.toLowerCase().replaceAll(' ', '_')}.jpg`;
