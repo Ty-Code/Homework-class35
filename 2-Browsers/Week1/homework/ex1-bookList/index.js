@@ -26,8 +26,9 @@ function createBookList(books) {
     const imgElement = document.createElement('img');
 
     pElement.textContent = `${book.title} - ${book.author}`;
-    let imgURL = `assets/${book.title.toLowerCase().replaceAll(' ', '_')}.jpg`;
+    const imgURL = `assets/${book.title.toLowerCase().replaceAll(' ', '_')}.jpg`;
     imgElement.setAttribute('src', imgURL);
+    imgElement.setAttribute('alt', '');
 
     book.alreadyRead === true
       ? (liElement.style.background = 'green')
