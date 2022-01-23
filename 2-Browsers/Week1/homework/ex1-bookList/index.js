@@ -30,7 +30,7 @@ function createBookList(books) {
     imgElement.setAttribute('src', imgURL);
     imgElement.setAttribute('alt', '');
 
-    book.alreadyRead === true
+    book.alreadyRead
       ? (liElement.style.background = 'green')
       : (liElement.style.background = 'red');
 
