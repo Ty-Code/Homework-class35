@@ -24,9 +24,9 @@ function createBookList(books) {
     const liElement = document.createElement('li');
     const pElement = document.createElement('p');
     const imgElement = document.createElement('img');
-
-    pElement.textContent = `${book.title} - ${book.author}`;
     const imgURL = `assets/${book.title.toLowerCase().replaceAll(' ', '_')}.jpg`;
+    
+    pElement.textContent = `${book.title} - ${book.author}`;
     imgElement.setAttribute('src', imgURL);
     imgElement.setAttribute('alt', '');
 
