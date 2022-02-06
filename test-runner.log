@@ -1,0 +1,205 @@
+2022-02-06 11:44:52 info: ---------------------------------------
+2022-02-06 11:44:52 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-02-06 11:44:52 info: ---------------------------------------
+2022-02-06 11:44:55 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls
+    ✓ should call `new Promise()`
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument
+    ✓ should reject with an Error object when called without an argument
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.229 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "John Doe".
+
+      25 |
+      26 |
+    > 27 |   getAnonName('John').then((data)=>console.log(data));
+         |                                          ^
+      28 |
+      29 |
+      30 |
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at 3-UsingAPIs/Week1/homework/ex1-johnWho.js:27:42
+2022-02-06 11:44:55 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  33:3  error  'main' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-02-06 11:47:06 info: ---------------------------------------
+2022-02-06 11:47:06 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-02-06 11:47:06 info: ---------------------------------------
+2022-02-06 11:47:08 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable
+    ✕ should have all TODO comments removed
+    ✓ `getAnonName` should not contain unneeded console.log calls
+    ✓ should call `new Promise()`
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (1 ms)
+    ✓ should reject with an Error object when called without an argument
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.188 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "John Doe".
+
+      25 |
+      26 | getAnonName('John').then((data) => console.log(data));
+    > 27 |
+         | ^
+      28 | // ! Do not change or remove the code below
+      29 | if (process.env.NODE_ENV !== 'test') {
+      30 |   main();
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at 3-UsingAPIs/Week1/homework/ex1-johnWho.js:27:42
+2022-02-06 11:47:09 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  30:3  error  'main' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-02-06 11:49:14 info: ---------------------------------------
+2022-02-06 11:49:14 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-02-06 11:49:14 info: ---------------------------------------
+2022-02-06 11:49:15 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable
+    ✕ should have all TODO comments removed
+    ✓ `getAnonName` should not contain unneeded console.log calls
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (1 ms)
+    ✓ should reject with an Error object when called without an argument
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.188 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-02-06 11:50:06 info: ---------------------------------------
+2022-02-06 11:50:06 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-02-06 11:50:06 info: ---------------------------------------
+2022-02-06 11:50:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable
+    ✕ should have all TODO comments removed
+    ✓ `getAnonName` should not contain unneeded console.log calls
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (1 ms)
+    ✓ should reject with an Error object when called without an argument
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.189 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-02-06 11:50:44 info: ---------------------------------------
+2022-02-06 11:50:44 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-02-06 11:50:44 info: ---------------------------------------
+2022-02-06 11:50:45 info: All unit tests passed.
+2022-02-06 11:50:46 info: All steps were completed successfully
