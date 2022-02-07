@@ -312,3 +312,340 @@ Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
 2022-02-07 12:04:43 info: -------------------------------------------------
 2022-02-07 12:04:44 info: All unit tests passed.
 2022-02-07 12:04:45 info: All steps were completed successfully
+2022-02-07 12:16:32 info: ---------------------------------------
+2022-02-07 12:16:32 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-02-07 12:16:32 info: ---------------------------------------
+2022-02-07 12:16:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+ PASS  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✓ should call `new Promise()` (1 ms)
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when the die settles successfully
+    ✓ should reject with an Error when the die rolls off the table (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.2 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 4".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll > 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 6".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll > 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Success! Die settled on 6.".
+
+      42 |
+      43 | function main() {
+    > 44 |   rollDie()
+         |            ^
+      45 |     .then((value) => console.log(`Success! Die settled on ${value}.`))
+      46 |     .catch((error) => {
+      47 |       clearTimeout(timeoutID);
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at 3-UsingAPIs/Week1/homework/ex3-rollDie.js:44:35
+2022-02-07 12:18:45 info: ---------------------------------------
+2022-02-07 12:18:45 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-02-07 12:18:45 info: ---------------------------------------
+2022-02-07 12:18:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+ PASS  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✓ should call `new Promise()`
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when the die settles successfully (1 ms)
+    ✓ should reject with an Error when the die rolls off the table
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.18 s, estimated 1 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 2".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll >= 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 2".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll >= 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 6".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll >= 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 1".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll >= 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 2".
+
+      23 |       console.log(`Die value is now: ${value}`);
+      24 |
+    > 25 |       // Use callback to notify that the die rolled off the table after 6 rolls
+         |               ^
+      26 |
+      27 |       if (roll >= 6) {
+      28 |         reject(new Error('Oops... Die rolled off the table.'));
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:25:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:38)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Oops... Die rolled off the table.".
+
+      44 |   rollDie()
+      45 |     .then((value) => console.log(`Success! Die settled on ${value}.`))
+    > 46 |     .catch((error) => {
+         |             ^
+      47 |       clearTimeout(timeoutID);
+      48 |       console.log(error.message);
+      49 |     });
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at 3-UsingAPIs/Week1/homework/ex3-rollDie.js:46:13
+2022-02-07 12:23:40 info: ---------------------------------------
+2022-02-07 12:23:40 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-02-07 12:23:40 info: ---------------------------------------
+2022-02-07 12:23:44 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+ PASS  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should call `new Promise()`
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when the die settles successfully (1 ms)
+    ✓ should reject with an Error when the die rolls off the table
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.207 s, estimated 1 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 6".
+
+      21 |       const value = Math.floor(Math.random() * 6) + 1;
+      22 |       console.log(`Die value is now: ${value}`);
+    > 23 |
+         | ^
+      24 |       // Use callback to notify that the die rolled off the table after 6 rolls
+      25 |
+      26 |       if (roll > 6) {
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:23:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:32:26)
+
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 1".
+
+      21 |       const value = Math.floor(Math.random() * 6) + 1;
+      22 |       console.log(`Die value is now: ${value}`);
+    > 23 |
+         | ^
+      24 |       // Use callback to notify that the die rolled off the table after 6 rolls
+      25 |
+      26 |       if (roll > 6) {
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:23:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:32:26)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 1".
+
+      21 |       const value = Math.floor(Math.random() * 6) + 1;
+      22 |       console.log(`Die value is now: ${value}`);
+    > 23 |
+         | ^
+      24 |       // Use callback to notify that the die rolled off the table after 6 rolls
+      25 |
+      26 |       if (roll > 6) {
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:23:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:32:26)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 2".
+
+      21 |       const value = Math.floor(Math.random() * 6) + 1;
+      22 |       console.log(`Die value is now: ${value}`);
+    > 23 |
+         | ^
+      24 |       // Use callback to notify that the die rolled off the table after 6 rolls
+      25 |
+      26 |       if (roll > 6) {
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:23:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:32:26)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 3".
+
+      21 |       const value = Math.floor(Math.random() * 6) + 1;
+      22 |       console.log(`Die value is now: ${value}`);
+    > 23 |
+         | ^
+      24 |       // Use callback to notify that the die rolled off the table after 6 rolls
+      25 |
+      26 |       if (roll > 6) {
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:23:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:32:26)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Die value is now: 1".
+
+      21 |       const value = Math.floor(Math.random() * 6) + 1;
+      22 |       console.log(`Die value is now: ${value}`);
+    > 23 |
+         | ^
+      24 |       // Use callback to notify that the die rolled off the table after 6 rolls
+      25 |
+      26 |       if (roll > 6) {
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:23:15)
+      at Timeout._onTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:32:26)
+
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "Oops... Die rolled off the table.".
+
+      41 |
+      42 | function main() {
+    > 43 |   rollDie()
+         |            ^
+      44 |     .then((value) => console.log(`Success! Die settled on ${value}.`))
+      45 |     .catch((error) => {
+      46 |       console.log(error.message);
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at 3-UsingAPIs/Week1/homework/ex3-rollDie.js:43:13
+2022-02-07 12:25:04 info: ---------------------------------------
+2022-02-07 12:25:04 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-02-07 12:25:04 info: ---------------------------------------
+2022-02-07 12:25:05 info: All unit tests passed.
+2022-02-07 12:25:06 info: All steps were completed successfully
+2022-02-07 12:25:57 info: ---------------------------------------
+2022-02-07 12:25:57 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-02-07 12:25:57 info: ---------------------------------------
+2022-02-07 12:25:58 info: All unit tests passed.
+2022-02-07 12:25:59 info: All steps were completed successfully
+2022-02-07 12:26:36 info: ---------------------------------------
+2022-02-07 12:26:36 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-02-07 12:26:36 info: ---------------------------------------
+2022-02-07 12:26:37 info: All unit tests passed.
+2022-02-07 12:26:38 info: All steps were completed successfully
