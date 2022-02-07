@@ -1,39 +1,80 @@
 {
-  "node": "v14.15.1",
+  "node": "v16.13.1",
   "system": {
     "manufacturer": "Apple Inc.",
-    "model": "MacBookPro11,3"
+    "model": "MacBookAir10,1"
   },
   "cpu": {
-    "manufacturer": "Intel®",
-    "brand": "Core™ i7-4960HQ",
-    "speed": 2.6
+    "manufacturer": "Apple",
+    "brand": "M1",
+    "speed": 2.4
   },
-  "memory": "16 GB",
+  "memory": "8 GB",
   "osInfo": {
     "platform": "darwin",
     "distro": "macOS",
-    "release": "11.5.2"
+    "release": "12.1"
   },
   "vscodeInfo": {
-    "version": "1.62.1",
+    "version": "1.63.2",
     "extensions": [
+      "aaron-bond.better-comments",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-preview-github-styles",
+      "CoenraadS.bracket-pair-colorizer-2",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
       "esbenp.prettier-vscode",
+      "evgeniypeshkov.syntax-highlighter",
+      "formulahendry.auto-rename-tag",
+      "hwencc.html-tag-wrapper",
+      "PKief.material-icon-theme",
+      "pranaygp.vscode-css-peek",
+      "ritwickdey.live-sass",
       "ritwickdey.LiveServer",
-      "shd101wyy.markdown-preview-enhanced"
+      "shd101wyy.markdown-preview-enhanced",
+      "streetsidesoftware.code-spell-checker",
+      "tht13.html-preview-vscode",
+      "WallabyJs.quokka-vscode"
     ],
     "userSettings": {
-      "explorer.confirmDragAndDrop": false,
-      "explorer.confirmDelete": false,
-      "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "javascript.updateImportsOnFileMove.enabled": "never",
-      "editor.formatOnSave": true,
+      "prettier.singleQuote": true,
+      "workbench.iconTheme": "material-icon-theme",
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "files.autoSave": "afterDelay",
+      "prettier.endOfLine": "auto",
+      "editor.formatOnType": true,
       "editor.tabSize": 2,
-      "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      }
+      "editor.linkedEditing": true,
+      "prettier.printWidth": 100,
+      "explorer.confirmDragAndDrop": false,
+      "editor.wordWrap": "on",
+      "html.format.wrapLineLength": 80,
+      "liveServer.settings.CustomBrowser": "chrome",
+      "liveServer.settings.donotShowInfoMsg": true,
+      "editor.formatOnSave": true,
+      "liveServer.settings.donotVerifyTags": true,
+      "html.format.indentInnerHtml": true,
+      "html.format.indentHandlebars": true,
+      "editor.foldingImportsByDefault": true,
+      "[html]": {
+        "editor.suggest.insertMode": "replace"
+      },
+      "editor.semanticHighlighting.enabled": true,
+      "workbench.startupEditor": "none",
+      "workbench.editor.untitled.hint": "hidden",
+      "editor.suggestSelection": "recentlyUsedByPrefix",
+      "turboConsoleLog.includeFileNameAndLineNum": false,
+      "turboConsoleLog.insertEnclosingClass": false,
+      "turboConsoleLog.logMessagePrefix": "",
+      "turboConsoleLog.delimiterInsideMessage": "",
+      "turboConsoleLog.insertEnclosingFunction": false,
+      "turboConsoleLog.addSemicolonInTheEnd": true,
+      "bracket-pair-colorizer-2.depreciation-notice": false,
+      "window.zoomLevel": 3
     }
   }
 }

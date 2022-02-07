@@ -649,3 +649,120 @@ This usually means that there are asynchronous operations that weren't stopped i
 2022-02-07 12:26:36 info: ---------------------------------------
 2022-02-07 12:26:37 info: All unit tests passed.
 2022-02-07 12:26:38 info: All steps were completed successfully
+2022-02-07 02:30:01 info: --------------------------------------------
+2022-02-07 02:30:01 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-07 02:30:01 info: --------------------------------------------
+2022-02-07 02:30:02 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "Error: Die 1 rolled off the table.
+".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+2022-02-07 02:30:29 info: --------------------------------------------
+2022-02-07 02:30:29 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-07 02:30:29 info: --------------------------------------------
+2022-02-07 02:30:30 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "Error: Die 1 rolled off the table.
+".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+2022-02-07 02:30:30 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  23:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-02-07 02:45:35 info: --------------------------------------------
+2022-02-07 02:45:35 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-07 02:45:35 info: --------------------------------------------
+2022-02-07 02:45:36 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable
+    ✓ should have all TODO comments removed
+    ✕ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()`
+    ✓ should resolve when all dice settle successfully (4 ms)
+    ✓ should reject with an Error when a die rolls off the table (27 ms)
+
+  ● ex4-pokerDiceAll › `rollDice` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:139:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.229 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-02-07 02:47:08 info: --------------------------------------------
+2022-02-07 02:47:08 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-07 02:47:08 info: --------------------------------------------
+2022-02-07 02:47:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✕ `rollDice` should not contain unneeded console.log calls (2 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()`
+    ✓ should resolve when all dice settle successfully (4 ms)
+    ✓ should reject with an Error when a die rolls off the table (27 ms)
+
+  ● ex4-pokerDiceAll › `rollDice` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:139:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.234 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-02-07 02:47:36 info: --------------------------------------------
+2022-02-07 02:47:36 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-07 02:47:36 info: --------------------------------------------
+2022-02-07 02:47:37 info: All unit tests passed.
+2022-02-07 02:47:38 info: All steps were completed successfully
