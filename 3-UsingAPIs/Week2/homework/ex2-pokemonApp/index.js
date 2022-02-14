@@ -1,39 +1,61 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-2-gotta-catch-em-all
 
-Complete the four functions provided in the starter `index.js` file:
+const body = document.querySelector('body');
 
-`fetchData`: In the `fetchData` function, make use of `fetch` and its Promise 
-  syntax in order to get the data from the public API. Errors (HTTP or network 
-  errors) should be logged to the console.
-
-`fetchAndPopulatePokemons`: Use `fetchData()` to load the pokemon data from the 
-  public API and populate the `<select>` element in the DOM.
-  
-`fetchImage`: Use `fetchData()` to fetch the selected image and update the 
-  `<img>` element in the DOM.
-
-`main`: The `main` function orchestrates the other functions. The `main` 
-  function should be executed when the window has finished loading.
-
-Use async/await and try/catch to handle promises.
-
-Try and avoid using global variables. As much as possible, try and use function 
-parameters and return values to pass data back and forth.
-------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('HTTP Error!');
+  }
+  return response.json();
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(data) {
+  const buttonElement = document.createElement('button');
+  body.append(buttonElement);
+  buttonElement.style.display = 'block';
+  buttonElement.type = 'button';
+  buttonElement.textContent = 'Get Pokemon!';
+  buttonElement.addEventListener('click', createOptions);
+
+  const selectElement = document.createElement('select');
+  body.append(selectElement);
+  selectElement.style.display = 'block';
+
+  function createOptions() {
+    const pokemons = data.results;
+    pokemons.forEach((pokemon) => {
+      const option = document.createElement('option');
+      selectElement.append(option);
+      option.value = pokemon.name;
+      option.textContent = pokemon.name;
+    });
+  }
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchImage() {
+  const selectElement = document.querySelector('select');
+  selectElement.addEventListener('change', async (e) => {
+    const oldImageElement = document.querySelector('img');
+    if (oldImageElement) oldImageElement.remove();
+    const imageElement = document.createElement('img');
+    body.append(imageElement);
+
+    const data2 = await fetchData(
+      `https://pokeapi.co/api/v2/pokemon/${e.target.value}`
+    );
+    imageElement.src = data2.sprites.front_default;
+  });
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  try {
+    const data = await fetchData('https://pokeapi.co/api/v2/pokemon');
+    fetchAndPopulatePokemons(data);
+    fetchImage();
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+window.addEventListener('load', main);
