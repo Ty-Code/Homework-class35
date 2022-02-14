@@ -15,15 +15,20 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const promises = dice.map(async (die) => await rollDie(die));
+  return Promise.race(promises);
 }
 
-// Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
+
+//? Answer: I think that the asynchronous operations have already been started and they are already underway by the time we call Promise.race() method. So all promises will be executed even though Promise.race() resolves the first promise that is fulfilled.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {

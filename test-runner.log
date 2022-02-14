@@ -185,3 +185,33 @@ ex3-rollAnAce.js
 2022-02-14 09:00:41 info: -----------------------------------------
 2022-02-14 09:00:42 info: All unit tests passed.
 2022-02-14 09:00:43 info: All steps were completed successfully
+2022-02-14 09:42:48 info: ----------------------------------------
+2022-02-14 09:42:48 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-02-14 09:42:48 info: ----------------------------------------
+2022-02-14 09:42:49 info: All unit tests passed.
+2022-02-14 09:42:50 error: *** ESLint Report ***
+
+ex4-diceRace.js
+  33:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-02-14 09:44:41 info: ----------------------------------------
+2022-02-14 09:44:41 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-02-14 09:44:41 info: ----------------------------------------
+2022-02-14 09:44:42 info: All unit tests passed.
+2022-02-14 09:44:43 error: *** ESLint Report ***
+
+ex4-diceRace.js
+  21:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  25:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-02-14 10:05:52 info: ----------------------------------------
+2022-02-14 10:05:52 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-02-14 10:05:52 info: ----------------------------------------
+2022-02-14 10:05:53 info: All unit tests passed.
+2022-02-14 10:05:54 info: All steps were completed successfully
