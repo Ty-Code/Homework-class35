@@ -10,7 +10,7 @@ async function fetchData(url) {
   return response.json();
 }
 
-function fetchAndPopulatePokemons(data) {
+function fetchAndPopulatePokemons(pokemonList) {
   const buttonElement = document.createElement('button');
   body.append(buttonElement);
   buttonElement.style.display = 'block';
@@ -23,17 +23,23 @@ function fetchAndPopulatePokemons(data) {
   selectElement.style.display = 'block';
 
   function createOptions() {
-    const pokemons = data.results;
-    pokemons.forEach((pokemon) => {
+    const placeholderOption = document.createElement('option');
+    selectElement.append(placeholderOption);
+    placeholderOption.value = '';
+    placeholderOption.textContent = '--Please select--';
+
+    pokemonList.forEach((pokemon) => {
       const option = document.createElement('option');
       selectElement.append(option);
+      option.value = '';
+      option.textContent = 'select';
       option.value = pokemon.name;
       option.textContent = pokemon.name;
     });
   }
 }
 
-function fetchImage() {
+function fetchImage(pokemonList) {
   const selectElement = document.querySelector('select');
   selectElement.addEventListener('change', async (e) => {
     const oldImageElement = document.querySelector('img');
@@ -41,18 +47,23 @@ function fetchImage() {
     const imageElement = document.createElement('img');
     body.append(imageElement);
 
-    const data2 = await fetchData(
-      `https://pokeapi.co/api/v2/pokemon/${e.target.value}`
+    const selectedPokemon = pokemonList.find(
+      (pokemon) => pokemon.name === e.target.value
     );
-    imageElement.src = data2.sprites.front_default;
+    const selectedPokemonURL = selectedPokemon.url;
+
+    const { sprites: images } = await fetchData(selectedPokemonURL);
+    imageElement.src = images.front_default;
   });
 }
 
 async function main() {
   try {
-    const data = await fetchData('https://pokeapi.co/api/v2/pokemon');
-    fetchAndPopulatePokemons(data);
-    fetchImage();
+    const { results: pokemonList } = await fetchData(
+      'https://pokeapi.co/api/v2/pokemon'
+    );
+    fetchAndPopulatePokemons(pokemonList);
+    fetchImage(pokemonList);
   } catch (error) {
     console.log(error);
   }
