@@ -15,7 +15,7 @@ function main() {
     .catch((error) => console.log('Rejected!', error.message));
 }
 
-//? Promise.all() runs the promises independently that's why in the case of a rejected promise, dice that have not yet finished their roll continue to do so.  
+//? My answer to the question: Promise.all() runs the promises independently that's why in the case of a rejected promise, dice that have not yet finished their roll continue to do so.  
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
