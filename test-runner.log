@@ -781,3 +781,13 @@ Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
 2022-02-07 08:49:08 info: ----------------------------------------------
 2022-02-07 08:49:09 info: All unit tests passed.
 2022-02-07 08:49:10 info: All steps were completed successfully
+2022-02-16 03:33:47 info: ---------------------------------------
+2022-02-16 03:33:47 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-02-16 03:33:47 info: ---------------------------------------
+2022-02-16 03:33:49 info: All unit tests passed.
+2022-02-16 03:33:50 info: All steps were completed successfully
+2022-02-16 04:27:01 info: --------------------------------------------
+2022-02-16 04:27:01 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-16 04:27:01 info: --------------------------------------------
+2022-02-16 04:27:03 info: All unit tests passed.
+2022-02-16 04:27:04 info: All steps were completed successfully

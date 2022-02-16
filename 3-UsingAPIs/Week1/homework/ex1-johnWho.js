@@ -14,7 +14,9 @@ const getAnonName = (firstName) => {
 };
 
 function main() {
-  getAnonName('John').then((data) => console.log(data));
+  getAnonName('John')
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err.message));
 }
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
