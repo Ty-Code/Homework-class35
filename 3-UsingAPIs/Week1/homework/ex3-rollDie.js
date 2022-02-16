@@ -32,7 +32,7 @@ function main() {
     });
 }
 
-//? My answer to do question: The problem no longer occurs. Once a promise either 'resolved' or 'rejected', its outcome can not be changed. In the modified version of the exercise, once the die rolls off the table, the promise is rejected, so its outcome can not be changed to 'resolved' later on.
+//? My answer to the question: The problem no longer occurs. Once a promise either 'resolved' or 'rejected', its outcome can not be changed. In the modified version of the exercise, once the die rolls off the table, the promise is rejected, so its outcome can not be changed to 'resolved' later on.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
