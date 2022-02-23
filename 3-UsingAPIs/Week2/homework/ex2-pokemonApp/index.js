@@ -10,63 +10,55 @@ async function fetchData(url) {
   return response.json();
 }
 
-function fetchAndPopulatePokemons(pokemonList) {
-  const buttonElement = document.createElement('button');
-  body.append(buttonElement);
-  buttonElement.style.display = 'block';
-  buttonElement.type = 'button';
-  buttonElement.textContent = 'Get Pokemon!';
-  buttonElement.addEventListener('click', createOptions);
-
-  const selectElement = document.createElement('select');
-  body.append(selectElement);
-  selectElement.style.display = 'block';
-
-  function createOptions() {
+async function fetchAndPopulatePokemons() {
+  try {
+    const { results: pokemonList } = await fetchData(
+      'https://pokeapi.co/api/v2/pokemon'
+    );
+    const selectElement = document.createElement('select');
+    body.append(selectElement);
+    selectElement.style.display = 'block';
     const placeholderOption = document.createElement('option');
     selectElement.append(placeholderOption);
     placeholderOption.value = '';
     placeholderOption.textContent = '--Please select--';
 
+    let i = 1;
     pokemonList.forEach((pokemon) => {
       const option = document.createElement('option');
       selectElement.append(option);
-      option.value = '';
-      option.textContent = 'select';
-      option.value = pokemon.name;
+      option.value = i++;
       option.textContent = pokemon.name;
     });
-  }
-}
-
-function fetchImage(pokemonList) {
-  const selectElement = document.querySelector('select');
-  selectElement.addEventListener('change', async (e) => {
-    const oldImageElement = document.querySelector('img');
-    if (oldImageElement) oldImageElement.remove();
-    const imageElement = document.createElement('img');
-    body.append(imageElement);
-
-    const selectedPokemon = pokemonList.find(
-      (pokemon) => pokemon.name === e.target.value
-    );
-    const selectedPokemonURL = selectedPokemon.url;
-
-    const { sprites: images } = await fetchData(selectedPokemonURL);
-    imageElement.src = images.front_default;
-  });
-}
-
-async function main() {
-  try {
-    const { results: pokemonList } = await fetchData(
-      'https://pokeapi.co/api/v2/pokemon'
-    );
-    fetchAndPopulatePokemons(pokemonList);
-    fetchImage(pokemonList);
+    selectElement.addEventListener('change', fetchImage);
   } catch (error) {
     console.log(error);
   }
+}
+
+async function fetchImage(e) {
+  try {
+    const {
+      sprites: { front_default: image },
+    } = await fetchData(`https://pokeapi.co/api/v2/pokemon/${e.target.value}`);
+    let imageElement = document.querySelector('img');
+    if (!imageElement) {
+      imageElement = document.createElement('img');
+      body.append(imageElement);
+    }
+    imageElement.src = image;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function main() {
+  const buttonElement = document.createElement('button');
+  body.append(buttonElement);
+  buttonElement.style.display = 'block';
+  buttonElement.type = 'button';
+  buttonElement.textContent = 'Get Pokemon!';
+  buttonElement.addEventListener('click', fetchAndPopulatePokemons);
 }
 
 window.addEventListener('load', main);
